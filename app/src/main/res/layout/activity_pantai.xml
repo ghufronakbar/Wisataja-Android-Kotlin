@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".kategori.CandiActivity">
+    tools:context=".kategori.PantaiActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginBottom="36dp"
                             android:fontFamily="@font/inter_bold"
-                            android:text="Candi"
+                            android:text="Pantai"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="24sp" />
@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/kategori_candi" />
+                    android:src="@drawable/kategori_pantai" />
 
             </androidx.cardview.widget.CardView>
 
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/inter_regular"
-                android:text="Salah satu daya tarik pada Yogyakarta tentu saja pada wisata Candinya. Hampir semua wisatawan yang berlibur di Yogyakarta menambahkan wisata candi kedalam daftar kunjungannya. Deretan Candi yang ada di Yogyakarta mempunyai keunikan dan pesonanya tersendiri loh!!!"
+                android:text="Salah satu daya tarik pada Yogyakarta ada pada pantai-pantainya loh yang tidak kalah cantik dan bagus dari kota-kota yang lainnya. Para wisatawan juga selalu menambahkan wisata pantai sebagai referensi liburannya. "
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
