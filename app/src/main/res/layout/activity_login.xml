@@ -58,7 +58,7 @@
             android:inputType="text|textWebEmailAddress"
             android:fontFamily="@font/inter_regular"
             android:textSize="12sp"
-            android:text="user@example.com"/>
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -94,7 +94,7 @@
             android:inputType="text|textPassword"
             android:fontFamily="@font/inter_regular"
             android:textSize="12sp"
-            android:text="12345678"/>
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
