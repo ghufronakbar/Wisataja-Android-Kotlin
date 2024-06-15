@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wisataja.ForgotPasswordActivity
@@ -63,5 +65,26 @@ class HomeFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         return view
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val cvPicture = view.findViewById<CardView>(R.id.cvPicture)
+
+        cvPicture.setOnClickListener {
+
+            // Get FragmentManager
+            val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
+
+            // Start a FragmentTransaction
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+
+            // Replace the fragment_home container with profileFragment
+            fragmentTransaction.replace(R.id.fragment_container, ProfileFragment())
+            fragmentTransaction.addToBackStack(null) // Optional: Add transaction to back stack
+            fragmentTransaction.commit()
+        }
     }
 }
