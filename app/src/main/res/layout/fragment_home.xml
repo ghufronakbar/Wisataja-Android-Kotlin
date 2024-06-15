@@ -3,294 +3,304 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="homefragment.HomeFragment">
 
-    <RelativeLayout
-        android:id="@+id/bannerHome"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/banner" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            android:fontFamily="@font/lobster_regular"
-            android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="24dp" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvSearch"
-            android:layout_width="250dp"
-            android:layout_centerHorizontal="true"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:backgroundTint="@color/semi_transparent"
-            android:elevation="8dp"
-            app:cardCornerRadius="20dp"
-
+            android:layout_height="match_parent"
             >
-
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/searchid"
+            <RelativeLayout
+                android:id="@+id/bannerHome"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:iconifiedByDefault="false"
-                app:queryHint="Search" />
+                android:layout_height="wrap_content">
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvPicture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:elevation="8dp"
-            app:cardCornerRadius="20dp"
-            android:layout_marginLeft="12dp"
-            android:layout_toRightOf="@id/cvSearch"
-            >
-            <ImageView
-                android:layout_width="46dp"
-                android:layout_height="46dp"
-                android:src="@drawable/foto_orang"
-                />
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/sectionKategori"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/bannerHome"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/inter_semi_bold"
-            android:text="Kategori  "
-            android:textColor="@color/black"
-            android:textSize="16dp" />
-
-        <ImageView
-            android:id="@+id/ivSeeAllKategori"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/next" />
-    </LinearLayout>
-
-
-    <HorizontalScrollView
-        android:id="@+id/hszKategori"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sectionKategori"
-        android:layout_marginTop="15dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvCandi"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_margin="2dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
-
-                <RelativeLayout
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banner" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/lobster_regular"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="24dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvSearch"
+                    android:layout_width="250dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:backgroundTint="@color/semi_transparent"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="20dp"
+
+                    >
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchid"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:iconifiedByDefault="false"
+                        app:queryHint="Search" />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/cvSearch"
+                    >
+                    <ImageView
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:src="@drawable/foto_orang"
+                        />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/sectionKategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bannerHome"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:text="Kategori  "
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/ivSeeAllKategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/next" />
+            </LinearLayout>
+
+
+            <HorizontalScrollView
+                android:id="@+id/hszKategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sectionKategori"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:padding="8dp">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_centerHorizontal="true"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
+                        android:id="@+id/cvCandi"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_margin="2dp"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="4dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:padding="8dp">
 
-                            <ImageView
+                            <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/kategori_candi" />
+                                android:layout_centerHorizontal="true"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="4dp">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/inter_bold"
-                                android:text="Candi"
-                                android:textColor="@color/white"
-                                android:textSize="16sp" />
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/kategori_candi" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/inter_bold"
+                                        android:text="Candi"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp" />
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
                         </RelativeLayout>
-
                     </androidx.cardview.widget.CardView>
 
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvPantai"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_margin="2dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="8dp">
-
                     <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_centerHorizontal="true"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
+                        android:id="@+id/cvPantai"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_margin="2dp"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="4dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:padding="8dp">
 
-                            <ImageView
+                            <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/kategori_pantai" />
+                                android:layout_centerHorizontal="true"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="4dp">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/inter_bold"
-                                android:text="Pantai"
-                                android:textColor="@color/white"
-                                android:textSize="16sp" />
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/kategori_pantai" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/inter_bold"
+                                        android:text="Pantai"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp" />
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
                         </RelativeLayout>
-
                     </androidx.cardview.widget.CardView>
 
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvMerapi"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_margin="2dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="8dp">
-
                     <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_centerHorizontal="true"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
+                        android:id="@+id/cvMerapi"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_margin="2dp"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="4dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:padding="8dp">
 
-                            <ImageView
+                            <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/kategori_merapi" />
+                                android:layout_centerHorizontal="true"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="4dp">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/inter_bold"
-                                android:text="Merapi"
-                                android:textColor="@color/white"
-                                android:textSize="16sp" />
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/kategori_merapi" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/inter_bold"
+                                        android:text="Merapi"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp" />
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
                         </RelativeLayout>
-
                     </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/sectionWisata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hszKategori"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:text="Wisata  "
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/ivSeeAllWisata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/next" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sectionWisata"
+                android:layout_marginTop="15dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewWisata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/layout_card_wisata" />
+            </HorizontalScrollView>
 
 
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <LinearLayout
-        android:id="@+id/sectionWisata"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/hszKategori"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/inter_semi_bold"
-            android:text="Wisata  "
-            android:textColor="@color/black"
-            android:textSize="16dp" />
-
-        <ImageView
-            android:id="@+id/ivSeeAllWisata"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/next" />
-    </LinearLayout>
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sectionWisata"
-        android:layout_marginTop="15dp">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewWisata"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/layout_card_wisata" />
-    </HorizontalScrollView>
-
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
