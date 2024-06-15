@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Wisataja"
         tools:targetApi="31">
         <activity
+            android:name=".kategori.MerapiActivity"
+            android:exported="false" />
+        <activity
             android:name=".kategori.PantaiActivity"
             android:exported="false" />
         <activity

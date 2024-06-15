@@ -13,6 +13,7 @@ import com.example.wisataja.ForgotPasswordActivity
 import com.example.wisataja.R
 import com.example.wisataja.adapter.WisataAdapter
 import com.example.wisataja.kategori.CandiActivity
+import com.example.wisataja.kategori.MerapiActivity
 import com.example.wisataja.kategori.PantaiActivity
 import com.example.wisataja.model.Wisata
 
@@ -38,6 +39,10 @@ class HomeFragment : Fragment() {
         }
         cvPantai.setOnClickListener {
             startActivity(Intent(requireContext(), PantaiActivity::class.java))
+        }
+
+        cvMerapi.setOnClickListener {
+            startActivity(Intent(requireContext(), MerapiActivity::class.java))
         }
 
         wisataList = mutableListOf(
