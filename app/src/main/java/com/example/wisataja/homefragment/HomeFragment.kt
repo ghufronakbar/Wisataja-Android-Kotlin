@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.wisataja.ForgotPasswordActivity
 import com.example.wisataja.R
 import com.example.wisataja.adapter.WisataAdapter
 import com.example.wisataja.kategori.CandiActivity

@@ -41,7 +41,7 @@
                 android:id="@+id/btnConfirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Masuk"
+                android:text="Lanjutkan"
                 android:textSize="18sp"
                 android:fontFamily="@font/inter_semi_bold"
                 android:layout_marginTop="12dp"
