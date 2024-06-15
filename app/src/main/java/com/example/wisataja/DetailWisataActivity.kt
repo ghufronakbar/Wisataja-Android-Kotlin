@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import org.w3c.dom.Text
 
 class DetailWisataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +27,8 @@ class DetailWisataActivity : AppCompatActivity() {
 
 
         // Set data to views in layout
-        val ivWisata: ImageView = findViewById(R.id.ivWisata)
-        val tvNamaWisata: TextView = findViewById(R.id.tvNamaWisata)
+        val ivWisata: ImageView = findViewById(R.id.ivKategori)
+        val tvNamaWisata: TextView = findViewById(R.id.tvNamaKategori)
         val tvNamaWisata2: TextView = findViewById(R.id.tvNamaWisata2)
         val tvJamBuka: TextView = findViewById(R.id.tvJamBuka)
         val tvRating: TextView = findViewById(R.id.tvRating)

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Wisataja"
         tools:targetApi="31">
         <activity
+            android:name=".kategori.CandiActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailWisataActivity"
             android:exported="false" />
         <activity

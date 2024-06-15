@@ -7,29 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wisataja.DetailWisataActivity
 import com.example.wisataja.R
 import com.example.wisataja.model.Wisata
 
-class WisataAdapter(
+class KategoriAdapter(
     private val context: Context,
     private val wisataList: List<Wisata>
-) : RecyclerView.Adapter<WisataAdapter.WisataViewHolder>() {
+) : RecyclerView.Adapter<KategoriAdapter.KategoriViewHolder>() {
 
-    inner class WisataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val cvWisata: CardView = itemView.findViewById(R.id.cvWisata)
+    inner class KategoriViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val ivWisata: ImageView = itemView.findViewById(R.id.ivKategori)
         private val tvNamaWisata: TextView = itemView.findViewById(R.id.tvNamaWisataCard)
-        private val tvRating: TextView = itemView.findViewById(R.id.tvRating)
-        private val tvLocation: TextView = itemView.findViewById(R.id.tvLocation)
 
         fun bind(wisata: Wisata) {
             ivWisata.setImageResource(wisata.gambar)
             tvNamaWisata.text = wisata.nama
-            tvRating.text = wisata.rating
-            tvLocation.text = wisata.lokasi
 
             itemView.setOnClickListener {
                 val intent = Intent(context, DetailWisataActivity::class.java).apply {
@@ -52,13 +46,13 @@ class WisataAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WisataViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KategoriViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.layout_card_wisata, parent, false)
-        return WisataViewHolder(view)
+            LayoutInflater.from(parent.context).inflate(R.layout.layout_card_wisata_kategori, parent, false)
+        return KategoriViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: WisataViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: KategoriViewHolder, position: Int) {
         holder.bind(wisataList[position])
     }
 
