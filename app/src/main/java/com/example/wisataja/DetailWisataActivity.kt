@@ -1,16 +1,18 @@
 package com.example.wisataja
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class DetailWisataActivity : AppCompatActivity() {
+    private lateinit var tvDeskripsi: TextView
+    private lateinit var tvSeeAll: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_wisata)
 
-        // Retrieve data from intent extras
         val namaWisata = intent.getStringExtra("nama")
         val ratingWisata = intent.getStringExtra("rating")
         val lokasiWisata = intent.getStringExtra("lokasi")
@@ -25,8 +27,6 @@ class DetailWisataActivity : AppCompatActivity() {
         val deskripsiWisata = intent.getStringExtra("deskripsi")
 
 
-
-        // Set data to views in layout
         val ivWisata: ImageView = findViewById(R.id.ivKategori)
         val tvNamaWisata: TextView = findViewById(R.id.tvNamaKategori)
         val tvNamaWisata2: TextView = findViewById(R.id.tvNamaWisata2)
@@ -56,8 +56,27 @@ class DetailWisataActivity : AppCompatActivity() {
         tvDeskripsi.text = deskripsiWisata
 
 
-
-        // Set title of the activity (optional)
         title = namaWisata
+
+        tvSeeAll = findViewById(R.id.tvSeeAll)
+
+        // Show "See All" if the description is too long
+        tvDeskripsi.post {
+            if (tvDeskripsi.lineCount > 3) {
+                tvSeeAll.visibility = View.VISIBLE
+                tvDeskripsi.maxLines = 3
+            }
+        }
+
+        // Handle "See All" click
+        tvSeeAll.setOnClickListener {
+            if (tvSeeAll.text == "Lihat Selengkapnya") {
+                tvDeskripsi.maxLines = Int.MAX_VALUE
+                tvSeeAll.text = "Lihat Lebih Sedikit"
+            } else {
+                tvDeskripsi.maxLines = 3
+                tvSeeAll.text = "Lihat Selengkapnya"
+            }
+        }
     }
 }
